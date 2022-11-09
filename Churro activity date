@@ -1,0 +1,9 @@
+import pandas as pd
+
+# Start writing code
+"""Find the activity date and the pe_description of facilities 
+with the name 'STREET CHURROS' and with a score of less than 95 points."""
+#los_angeles_restaurant_health_inspections[["activity_date", "pe_description"]]
+p = los_angeles_restaurant_health_inspections[(los_angeles_restaurant_health_inspections["score"]<95) & (los_angeles_restaurant_health_inspections["facility_name"]=="STREET CHURROS")][["activity_date","pe_description"]]
+p["activity_date"] = p["activity_date"].dt.date
+p

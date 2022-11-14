@@ -1,0 +1,9 @@
+# Import your libraries
+#Find the most profitable company from the financial sector. Output the result along with the continent.
+import pandas as pd
+
+# Start writing code
+#forbes_global_2010_2014.head()
+fin =forbes_global_2010_2014[forbes_global_2010_2014["sector"]=="Financials"]
+profit =fin["profits"].max()
+fin[fin["profits"]==profit][["company","continent"]]
